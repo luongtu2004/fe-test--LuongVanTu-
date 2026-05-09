@@ -60,7 +60,9 @@ const MainLayout: React.FC = () => {
         <Sider 
           trigger={null} 
           collapsible 
-          collapsed={collapsed} 
+          collapsed={collapsed}
+          breakpoint="md"
+          onBreakpoint={(broken) => setCollapsed(broken)}
           className="border-r border-border z-10 !bg-background"
           width={240}
         >

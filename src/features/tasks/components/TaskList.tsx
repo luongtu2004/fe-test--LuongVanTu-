@@ -364,6 +364,7 @@ const TaskList: React.FC = () => {
           dataSource={filteredTasks}
           rowKey="id"
           rowClassName="group"
+          scroll={{ x: 'max-content' }}
           pagination={{
             current: pagination.currentPage,
             pageSize: pagination.pageSize,
