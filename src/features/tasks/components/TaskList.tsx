@@ -325,10 +325,12 @@ const TaskList: React.FC = () => {
           value={filters.dateRange ? [dayjs(filters.dateRange[0]), dayjs(filters.dateRange[1])] : null}
         />
         <Button 
-          icon={<RotateCcw size={14} />} 
+          icon={<RotateCcw size={14} className="mr-1" />} 
           onClick={handleReset}
-          className="shadow-sm w-full sm:w-auto"
-        />
+          className="shadow-sm w-full sm:w-auto flex items-center justify-center"
+        >
+          Reset Filters
+        </Button>
       </div>
 
       <div className="border border-border bg-card rounded-lg overflow-hidden shadow-sm">
