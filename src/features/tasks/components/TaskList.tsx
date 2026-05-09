@@ -271,7 +271,7 @@ const TaskList: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <div className="flex justify-between items-center pb-4 border-b border-border">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4 border-b border-border gap-4 sm:gap-0">
         <div>
           <Title level={2} className="!m-0 tracking-tight !font-semibold">Issues</Title>
           <p className="text-muted-foreground mt-1 text-sm">Manage and track your team's work.</p>
@@ -280,25 +280,25 @@ const TaskList: React.FC = () => {
           type="primary" 
           icon={<Plus size={16} />} 
           onClick={() => handleOpenModal()}
-          className="shadow-none"
+          className="shadow-none w-full sm:w-auto"
         >
           New Issue
         </Button>
       </div>
 
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
         <Input
           placeholder="Search issues..."
           prefix={<Search size={14} className="text-muted-foreground" />}
           onChange={handleSearch}
           value={searchInput}
           allowClear
-          className="w-64 shadow-sm"
+          className="w-full sm:w-64 shadow-sm"
         />
         <Select
           mode="multiple"
           placeholder="Status"
-          className="min-w-[160px] shadow-sm"
+          className="w-full sm:min-w-[160px] shadow-sm"
           onChange={handleStatusFilter}
           value={filters.status}
           allowClear
@@ -310,7 +310,7 @@ const TaskList: React.FC = () => {
         </Select>
         <Select
           placeholder="Priority"
-          className="w-32 shadow-sm"
+          className="w-full sm:w-32 shadow-sm"
           onChange={handlePriorityFilter}
           value={filters.priority}
           allowClear
@@ -320,14 +320,14 @@ const TaskList: React.FC = () => {
           <Select.Option value="low">Low</Select.Option>
         </Select>
         <RangePicker 
-          className="w-64 shadow-sm" 
+          className="w-full sm:w-64 shadow-sm" 
           onChange={handleDateFilter}
           value={filters.dateRange ? [dayjs(filters.dateRange[0]), dayjs(filters.dateRange[1])] : null}
         />
         <Button 
           icon={<RotateCcw size={14} />} 
           onClick={handleReset}
-          className="shadow-sm"
+          className="shadow-sm w-full sm:w-auto"
         />
       </div>
 
