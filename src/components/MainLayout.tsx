@@ -157,9 +157,6 @@ const MainLayout: React.FC = () => {
                 unCheckedChildren={<SunOutlined className="text-xs" />}
                 className={isDarkMode ? 'bg-primary' : 'bg-muted'}
               />
-              <div className="w-8 h-8 rounded-full bg-secondary border border-border flex items-center justify-center cursor-pointer hover:bg-accent transition-colors">
-                <span className="text-sm font-medium">U</span>
-              </div>
             </div>
           </Header>
           <Content className="p-4 md:p-8 overflow-auto">
